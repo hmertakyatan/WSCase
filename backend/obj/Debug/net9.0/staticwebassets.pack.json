@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\S25.jpeg",
+      "PackagePath": "staticwebassets\\static\\icons\\S25.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\catalbicak.jpg",
+      "PackagePath": "staticwebassets\\static\\icons\\catalbicak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\electronics.png",
+      "PackagePath": "staticwebassets\\static\\icons\\electronics.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\equipment.png",
+      "PackagePath": "staticwebassets\\static\\icons\\equipment.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\iphone16.jpg",
+      "PackagePath": "staticwebassets\\static\\icons\\iphone16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\kitchen.png",
+      "PackagePath": "staticwebassets\\static\\icons\\kitchen.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\klavye.jpg",
+      "PackagePath": "staticwebassets\\static\\icons\\klavye.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\monitor.jpg",
+      "PackagePath": "staticwebassets\\static\\icons\\monitor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\mouse.jpeg",
+      "PackagePath": "staticwebassets\\static\\icons\\mouse.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\mousepad.jpg",
+      "PackagePath": "staticwebassets\\static\\icons\\mousepad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\notebook.jpg",
+      "PackagePath": "staticwebassets\\static\\icons\\notebook.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\tencere.jpg",
+      "PackagePath": "staticwebassets\\static\\icons\\tencere.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\webcam.png",
+      "PackagePath": "staticwebassets\\static\\icons\\webcam.png"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WorkSoftCase.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WorkSoftCase.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.WorkSoftCase.props",
+      "PackagePath": "build\\WorkSoftCase.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.WorkSoftCase.props",
+      "PackagePath": "buildMultiTargeting\\WorkSoftCase.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.WorkSoftCase.props",
+      "PackagePath": "buildTransitive\\WorkSoftCase.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

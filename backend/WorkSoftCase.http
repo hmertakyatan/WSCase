@@ -1,0 +1,6 @@
+@WorkSoftCase_HostAddress = http://localhost:5270
+
+GET {{WorkSoftCase_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,1361 @@
+{
+  "Version": 1,
+  "Hash": "KkNjKaRuECqF589QnPsIdonxWkFcZKC9f4M+ByLjUl0=",
+  "Source": "WorkSoftCase",
+  "BasePath": "_content/WorkSoftCase",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WorkSoftCase\\wwwroot",
+      "Source": "WorkSoftCase",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\catalbicak.jpg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/catalbicak#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kefiscsazd",
+      "Integrity": "hFUawGlPFefQfLYrHuTCmwPqpKXDkRe7sl5Ur2SsE/o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\catalbicak.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\electronics.png",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/electronics#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ms02735v13",
+      "Integrity": "eix54M8PxlfXAB3kgiGLPd5X1Pz7FPq2SkoH9mMeSkI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\electronics.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\equipment.png",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/equipment#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jf4zt3rl1s",
+      "Integrity": "LxoDay4nzBt75xzdK0ZNUEYn1/DdhkrIVWv8h5sPATU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\equipment.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\iphone16.jpg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/iphone16#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0ggwavumj8",
+      "Integrity": "QKEBe5wMNChFxgmnVwOL8jOMCwjZ7laPIexHaZYqV7A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\iphone16.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\kitchen.png",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/kitchen#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "svdm7kvwe6",
+      "Integrity": "OOkWL0C9G9SYFAgzdz9BWsodNb6Wm96oJiZo38YfaPM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\kitchen.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\klavye.jpg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/klavye#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m7lknmz5of",
+      "Integrity": "YqfQLSYoGbNHJoH6vBpsLOlATWhx7cpEjNFYoR6QwEQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\klavye.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\monitor.jpg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/monitor#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f7ag8f46cz",
+      "Integrity": "VQTuCDxIL+vm9tKJVF7YpXmheKClVNbRkEVgXiWp2yk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\monitor.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\mouse.jpeg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/mouse#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d0ghqtodpb",
+      "Integrity": "s+aMprplPiq72ohKYkd8E35mk1sYUe01QAPE/Vf6We0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\mouse.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\mousepad.jpg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/mousepad#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m8jwrilfpf",
+      "Integrity": "mkOe/rPgq7WXVI+K2kB4Rt/E080AAB4OpXcZErdjpEk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\mousepad.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\notebook.jpg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/notebook#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yb8isq8igy",
+      "Integrity": "rj7wSlcXcBNun0/6lPiyRCMAKSxLaQnRx1uR30wW9+A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\notebook.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\S25.jpeg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/S25#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "csg7cyxr04",
+      "Integrity": "vHRkVz/Kb+J3nh1skaW/OIrTMqSHA4IgQeXohrr4Txs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\S25.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\tencere.jpg",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/tencere#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sb347bxchf",
+      "Integrity": "KJNbUryB2hXmLLxNpqpDi0ssrWgPwFXSgQW/AuH0REg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\tencere.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\webcam.png",
+      "SourceId": "WorkSoftCase",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\",
+      "BasePath": "_content/WorkSoftCase",
+      "RelativePath": "static/icons/webcam#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kzsqbmqcgy",
+      "Integrity": "wEeON9C6Lyza8QnDVI/8oGxBAAQgDR8gRzEItUtUOOY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\icons\\webcam.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "static/icons/catalbicak.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\catalbicak.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "402698"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hFUawGlPFefQfLYrHuTCmwPqpKXDkRe7sl5Ur2SsE/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:37:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hFUawGlPFefQfLYrHuTCmwPqpKXDkRe7sl5Ur2SsE/o="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/catalbicak.kefiscsazd.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\catalbicak.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "402698"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hFUawGlPFefQfLYrHuTCmwPqpKXDkRe7sl5Ur2SsE/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:37:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kefiscsazd"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/catalbicak.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hFUawGlPFefQfLYrHuTCmwPqpKXDkRe7sl5Ur2SsE/o="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/electronics.ms02735v13.png",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\electronics.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25590"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eix54M8PxlfXAB3kgiGLPd5X1Pz7FPq2SkoH9mMeSkI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 19:33:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ms02735v13"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/electronics.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eix54M8PxlfXAB3kgiGLPd5X1Pz7FPq2SkoH9mMeSkI="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/electronics.png",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\electronics.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25590"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eix54M8PxlfXAB3kgiGLPd5X1Pz7FPq2SkoH9mMeSkI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 19:33:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eix54M8PxlfXAB3kgiGLPd5X1Pz7FPq2SkoH9mMeSkI="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/equipment.jf4zt3rl1s.png",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\equipment.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28153"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LxoDay4nzBt75xzdK0ZNUEYn1/DdhkrIVWv8h5sPATU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 19:34:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jf4zt3rl1s"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/equipment.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LxoDay4nzBt75xzdK0ZNUEYn1/DdhkrIVWv8h5sPATU="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/equipment.png",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\equipment.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28153"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LxoDay4nzBt75xzdK0ZNUEYn1/DdhkrIVWv8h5sPATU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 19:34:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LxoDay4nzBt75xzdK0ZNUEYn1/DdhkrIVWv8h5sPATU="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/iphone16.0ggwavumj8.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\iphone16.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20594"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QKEBe5wMNChFxgmnVwOL8jOMCwjZ7laPIexHaZYqV7A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:33:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0ggwavumj8"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/iphone16.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QKEBe5wMNChFxgmnVwOL8jOMCwjZ7laPIexHaZYqV7A="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/iphone16.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\iphone16.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20594"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QKEBe5wMNChFxgmnVwOL8jOMCwjZ7laPIexHaZYqV7A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:33:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QKEBe5wMNChFxgmnVwOL8jOMCwjZ7laPIexHaZYqV7A="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/kitchen.png",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\kitchen.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19138"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OOkWL0C9G9SYFAgzdz9BWsodNb6Wm96oJiZo38YfaPM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 19:35:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OOkWL0C9G9SYFAgzdz9BWsodNb6Wm96oJiZo38YfaPM="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/kitchen.svdm7kvwe6.png",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\kitchen.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19138"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OOkWL0C9G9SYFAgzdz9BWsodNb6Wm96oJiZo38YfaPM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 19:35:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "svdm7kvwe6"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/kitchen.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OOkWL0C9G9SYFAgzdz9BWsodNb6Wm96oJiZo38YfaPM="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/klavye.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\klavye.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93690"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YqfQLSYoGbNHJoH6vBpsLOlATWhx7cpEjNFYoR6QwEQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:32:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YqfQLSYoGbNHJoH6vBpsLOlATWhx7cpEjNFYoR6QwEQ="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/klavye.m7lknmz5of.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\klavye.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93690"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YqfQLSYoGbNHJoH6vBpsLOlATWhx7cpEjNFYoR6QwEQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:32:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m7lknmz5of"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/klavye.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YqfQLSYoGbNHJoH6vBpsLOlATWhx7cpEjNFYoR6QwEQ="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/monitor.f7ag8f46cz.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\monitor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23821"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VQTuCDxIL+vm9tKJVF7YpXmheKClVNbRkEVgXiWp2yk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:22:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f7ag8f46cz"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/monitor.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VQTuCDxIL+vm9tKJVF7YpXmheKClVNbRkEVgXiWp2yk="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/monitor.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\monitor.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23821"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VQTuCDxIL+vm9tKJVF7YpXmheKClVNbRkEVgXiWp2yk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:22:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VQTuCDxIL+vm9tKJVF7YpXmheKClVNbRkEVgXiWp2yk="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/mouse.d0ghqtodpb.jpeg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\mouse.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5101"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s+aMprplPiq72ohKYkd8E35mk1sYUe01QAPE/Vf6We0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 20:01:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d0ghqtodpb"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/mouse.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s+aMprplPiq72ohKYkd8E35mk1sYUe01QAPE/Vf6We0="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/mouse.jpeg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\mouse.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5101"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s+aMprplPiq72ohKYkd8E35mk1sYUe01QAPE/Vf6We0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 20:01:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s+aMprplPiq72ohKYkd8E35mk1sYUe01QAPE/Vf6We0="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/mousepad.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\mousepad.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14145"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mkOe/rPgq7WXVI+K2kB4Rt/E080AAB4OpXcZErdjpEk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:26:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mkOe/rPgq7WXVI+K2kB4Rt/E080AAB4OpXcZErdjpEk="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/mousepad.m8jwrilfpf.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\mousepad.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14145"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mkOe/rPgq7WXVI+K2kB4Rt/E080AAB4OpXcZErdjpEk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:26:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m8jwrilfpf"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/mousepad.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mkOe/rPgq7WXVI+K2kB4Rt/E080AAB4OpXcZErdjpEk="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/notebook.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\notebook.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "501234"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rj7wSlcXcBNun0/6lPiyRCMAKSxLaQnRx1uR30wW9+A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:34:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rj7wSlcXcBNun0/6lPiyRCMAKSxLaQnRx1uR30wW9+A="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/notebook.yb8isq8igy.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\notebook.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "501234"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rj7wSlcXcBNun0/6lPiyRCMAKSxLaQnRx1uR30wW9+A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:34:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yb8isq8igy"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/notebook.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rj7wSlcXcBNun0/6lPiyRCMAKSxLaQnRx1uR30wW9+A="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/S25.csg7cyxr04.jpeg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\S25.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6294"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHRkVz/Kb+J3nh1skaW/OIrTMqSHA4IgQeXohrr4Txs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 20:02:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "csg7cyxr04"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/S25.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHRkVz/Kb+J3nh1skaW/OIrTMqSHA4IgQeXohrr4Txs="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/S25.jpeg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\S25.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6294"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHRkVz/Kb+J3nh1skaW/OIrTMqSHA4IgQeXohrr4Txs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 20:02:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHRkVz/Kb+J3nh1skaW/OIrTMqSHA4IgQeXohrr4Txs="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/tencere.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\tencere.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KJNbUryB2hXmLLxNpqpDi0ssrWgPwFXSgQW/AuH0REg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:37:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KJNbUryB2hXmLLxNpqpDi0ssrWgPwFXSgQW/AuH0REg="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/tencere.sb347bxchf.jpg",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\tencere.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KJNbUryB2hXmLLxNpqpDi0ssrWgPwFXSgQW/AuH0REg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:37:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sb347bxchf"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/tencere.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KJNbUryB2hXmLLxNpqpDi0ssrWgPwFXSgQW/AuH0REg="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/webcam.kzsqbmqcgy.png",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\webcam.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181155"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wEeON9C6Lyza8QnDVI/8oGxBAAQgDR8gRzEItUtUOOY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:28:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kzsqbmqcgy"
+        },
+        {
+          "Name": "label",
+          "Value": "static/icons/webcam.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wEeON9C6Lyza8QnDVI/8oGxBAAQgDR8gRzEItUtUOOY="
+        }
+      ]
+    },
+    {
+      "Route": "static/icons/webcam.png",
+      "AssetFile": "C:\\Users\\user\\OneDrive\\Desktop\\internproject\\backend\\wwwroot\\static\\icons\\webcam.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "181155"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wEeON9C6Lyza8QnDVI/8oGxBAAQgDR8gRzEItUtUOOY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 May 2025 18:28:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wEeON9C6Lyza8QnDVI/8oGxBAAQgDR8gRzEItUtUOOY="
+        }
+      ]
+    }
+  ]
+}
