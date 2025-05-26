@@ -28,6 +28,7 @@ namespace WorkSoftCase.Services.Impl
             _config = config;
             _userRepository = userRepository;
         }
+        //TODO: REFRESH TOKEN
         public string GenerateToken(string username)
         {
             var claims = new[]

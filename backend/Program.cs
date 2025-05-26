@@ -59,12 +59,14 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 
-app.Lifetime.ApplicationStarted.Register(async () =>
+async Task InitializeDatabaseAsync(IServiceProvider services)
 {
-    var dbConnection = app.Services.GetRequiredService<IDatabaseConnection>();
+    var dbConnection = services.GetRequiredService<IDatabaseConnection>();
     using var connection = await dbConnection.ConnectAsync();
     await DbInitializer.InitializeTablesAsync(connection);
-});
+}
+
+await InitializeDatabaseAsync(app.Services);
 
 if (app.Environment.IsDevelopment())
 {
