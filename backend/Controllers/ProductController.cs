@@ -27,15 +27,17 @@ namespace WorkSoftCase.Controllers
         {
             try
             {
-                var products = await _productService.GetAllProductsAsync();
-                if (products == null || !products.Any())
-                    return Ok(ApiResponse<IEnumerable<ProductResponse>>.SuccessMessage("Ürün bulunamadı.", data: []));
-
-                return Ok(ApiResponse<IEnumerable<ProductResponse>>.SuccessMessage("Tüm ürünler başarıyla getirildi.", data: products));
+                var result = await _productService.GetAllProductsAsync();
+                if (result == null || result.Data == null || !result.Data.Any())
+                {
+                    return Ok(ApiResponse<IEnumerable<CategoryResponse>>.SuccessMessage(HttpContext, "Kategoriye ait ürün bulunamadı.", data: []));
+                }
+                var response = ApiResponse<IEnumerable<ProductResponse>>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
 
@@ -44,17 +46,13 @@ namespace WorkSoftCase.Controllers
         {
             try
             {
-                var product = await _productService.GetProductByIdAsync(id);
-   
-                return Ok(ApiResponse<ProductResponse>.SuccessMessage("Ürün başarıyla getirildi.", data: product));
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(ApiResponse<object>.ErrorMessage(ex.Message, statusCode: 404));
+                var result = await _productService.GetProductByIdAsync(id);
+                var response = ApiResponse<ProductResponse>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
 
@@ -62,23 +60,17 @@ namespace WorkSoftCase.Controllers
         public async Task<IActionResult> AddProduct([FromBody] ProductRequest newProduct)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ApiResponse<object>.ErrorMessage("Geçersiz ürün verisi."));
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext,"Geçersiz ürün verisi.", 400));
 
             try
             {
                 var result = await _productService.AddProductAsync(newProduct);
-                if (!result)
-                    return BadRequest(ApiResponse<object>.ErrorMessage("Ürün eklenemedi.", statusCode:404));
-
-                return Ok(ApiResponse<bool>.SuccessMessage("Ürün başarıyla oluşturuldu."));
-            }
-            catch(DatabaseOperationException ex)
-            {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage(ex.Message, statusCode: 404));
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.",500));
             }
         }
 
@@ -86,31 +78,21 @@ namespace WorkSoftCase.Controllers
         public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] ProductRequest updatedProduct)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ApiResponse<object>.ErrorMessage("Geçersiz ürün verisi."));
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "Geçersiz ürün verisi.", 400));
 
             var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
             if (ipAddress == null)
-                return BadRequest(ApiResponse<object>.ErrorMessage("IP adresi alınamadı."));
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "IP adresi alınamadı.", 400));
 
             try
             {
                 var result = await _productService.UpdateProductAsync(id, updatedProduct, ipAddress);
-                if (!result)
-                    return BadRequest(ApiResponse<object>.ErrorMessage("Ürün güncellenemedi."));
-
-                return Ok(ApiResponse<bool>.SuccessMessage("Ürün başarıyla güncellendi."));
-            }
-            catch(NotFoundException ex)
-            {
-                return NotFound(ApiResponse<object>.ErrorMessage(ex.Message, statusCode: 404));
-            }
-            catch(DatabaseOperationException ex)
-            {
-                return StatusCode(500,ApiResponse<object>.ErrorMessage(ex.Message, statusCode: 500));
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
 
@@ -120,18 +102,12 @@ namespace WorkSoftCase.Controllers
             try
             {
                 var result = await _productService.DeleteProductAsync(id);
-                if (!result)
-                    return BadRequest(ApiResponse<object>.ErrorMessage("Ürün silinemedi."));
-
-                return Ok(ApiResponse<bool>.SuccessMessage("Ürün başarıyla silindi.", data: true));
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(ApiResponse<object>.ErrorMessage(ex.Message, statusCode:404));
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
 
@@ -139,19 +115,17 @@ namespace WorkSoftCase.Controllers
         public async Task<IActionResult> GetProductsByCategoryIds([FromBody] List<Guid> categories)
         {
             if (categories == null || !categories.Any())
-                return BadRequest(ApiResponse<object>.ErrorMessage("Kategori ID'leri boş veya eksik.", statusCode: 400));
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "Kategori ID'leri boş veya eksik.", 400));
 
             try
             {
-                var products = await _productService.GetProductsByCategoryIdsAsync(categories);
-                if (products == null || !products.Any())
-                    return Ok(ApiResponse<IEnumerable<ProductResponse>>.SuccessMessage("Kategoriye ait ürün bulunamadı.", data: []));
-
-                return Ok(ApiResponse<IEnumerable<ProductResponse>>.SuccessMessage("Ürünler başarıyla getirildi.", data: products));
+                var result = await _productService.GetProductsByCategoryIdsAsync(categories);
+                var response = ApiResponse<IEnumerable<ProductResponse>>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
 
@@ -159,19 +133,17 @@ namespace WorkSoftCase.Controllers
         public async Task<IActionResult> AddProductsAsList([FromBody] List<ProductRequest> products)
         {
             if (products == null || !products.Any())
-                return BadRequest(ApiResponse<object>.ErrorMessage("Ürün listesi boş veya null."));
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "Ürün listesi boş.", 400));
 
             try
             {
-                var success = await _productService.AddProductsRangeAsync(products);
-                if (!success)
-                    return StatusCode(500, ApiResponse<object>.ErrorMessage("Ürünler eklenirken hata oluştu."));
-
-                return Ok(ApiResponse<bool>.SuccessMessage("Ürünler başarıyla eklendi.", data: true));
+                var result = await _productService.AddProductsRangeAsync(products);
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
     }

@@ -14,6 +14,7 @@ using WorkSoftCase.Exceptions;
 using WorkSoftCase.Repository.Interfaces;
 using WorkSoftCase.Repository.Interfaces.IRepository;
 using WorkSoftCase.Services.Interfaces;
+using WorkSoftCase.Services.Results;
 
 namespace WorkSoftCase.Services.Impl
 {
@@ -22,6 +23,7 @@ namespace WorkSoftCase.Services.Impl
         private readonly PasswordHasher<string> _hasher = new();
         private readonly IConfiguration _config;
         private readonly IUserRepository _userRepository;
+
 
         public AuthService(IConfiguration config, IUserRepository userRepository)
         {
@@ -55,21 +57,21 @@ namespace WorkSoftCase.Services.Impl
             return _hasher.HashPassword(null, password);
         }
 
-        public async Task<string> LoginAsync(LoginRequest loginRequest)
+        public async Task<Result<string>> LoginAsync(LoginRequest loginRequest)
         {
             var user = await _userRepository.GetUserByUsername(loginRequest.Username);
             if (user == null || !VerifyPassword(user.UserPassword, loginRequest.Password))
-                throw new UnauthorizedAccessException("Kullanıcı adı veya şifre hatalı.");  
+                return Result<string>.Failure(message: "Kullanıcı adı veya şifre hatalı.", statusCode: 401);
 
             var token = GenerateToken(user.UserName);
-            return token;
+            return Result<string>.Success(message: "Giriş işlemi başarılı.", data: token);
         }
 
-        public async Task<bool> RegisterAsync(UserRequest request)
+        public async Task<Result<object>> RegisterAsync(UserRequest request)
         {
             var exist = await _userRepository.IsUserNameExistsAsync(request.UserName);
             if (exist)
-                throw new ConflictException("Bu kullanıcı adı zaten mevcut.");
+                return Result<object>.Failure(message: "Kullanıcı adı kullanılıyor.", statusCode: 409);
 
             var hashedPassword = HashPassword(request.Password);
             var user = new User
@@ -83,9 +85,9 @@ namespace WorkSoftCase.Services.Impl
 
             var success = await _userRepository.AddAsync(user);
             if (!success)
-                throw new DatabaseOperationException("Kullanıcı eklenemedi.");
+                return Result<object>.Failure(message: "Kayıt işlemi başarısız.");    
 
-            return true;
+            return Result<object>.Success(message: "Kayıt işlemi başarılı.");
         }
         
 

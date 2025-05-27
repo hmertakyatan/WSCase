@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using WorkSoftCase.Dtos.Requests;
 using WorkSoftCase.Dtos.Responses;
 using WorkSoftCase.Entities;
-using WorkSoftCase.Exceptions;
 using WorkSoftCase.Services.Interfaces;
 
 namespace WorkSoftCase.Controllers
@@ -21,50 +20,40 @@ namespace WorkSoftCase.Controllers
         {
             _authService = authService;
         }
+
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRequest request)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "Geçersiz kullanıcı verisi.", 400));
+
             try
             {
-                var success = await _authService.RegisterAsync(request);
-
-                if (!success)
-                    return BadRequest(ApiResponse<object>.ErrorMessage("Kayıt işlemi başarısız oldu."));
-                
-                return Ok(ApiResponse<object>.SuccessMessage("Kayıt başarılı."));
-            }
-            catch (ConflictException ex)
-            {
-                return Conflict(ApiResponse<string>.ErrorMessage(ex.Message, statusCode: 409));
-            }
-            catch (DatabaseOperationException ex)
-            {
-                return StatusCode(500, ApiResponse<string>.ErrorMessage(ex.Message, statusCode:500));
+                var result = await _authService.RegisterAsync(request);
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<string>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "Geçersiz giriş verisi.", 400));
+
             try
             {
-                var token = await _authService.LoginAsync(request);
-                if (string.IsNullOrEmpty(token))
-                    return StatusCode(500, ApiResponse<string>.ErrorMessage("Token oluşturulamadı."));
-                    
-                return Ok(ApiResponse<string>.SuccessMessage("Giriş başarılı.", data: token));
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(ApiResponse<object>.ErrorMessage(ex.Message, statusCode: 401));
+                var result = await _authService.LoginAsync(request);
+                var response = ApiResponse<string>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
     }

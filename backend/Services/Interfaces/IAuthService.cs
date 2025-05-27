@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using WorkSoftCase.Dtos.Requests;
 using WorkSoftCase.Dtos.Responses;
 using WorkSoftCase.Entities;
+using WorkSoftCase.Services.Results;
 
 namespace WorkSoftCase.Services.Interfaces
 {
     public interface IAuthService
     {
-        Task<bool> RegisterAsync(UserRequest request);
-        Task<string> LoginAsync(LoginRequest request);
+        Task<Result<object>> RegisterAsync(UserRequest request);
+        Task<Result<string>> LoginAsync(LoginRequest request);
         public string HashPassword(string password);
         public bool VerifyPassword(string hashedPassword, string providedPassword);
         public string GenerateToken(string username);

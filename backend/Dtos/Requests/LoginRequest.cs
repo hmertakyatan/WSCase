@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WorkSoftCase.Dtos.Requests
 {
-    public class LoginRequest
+    public record LoginRequest
     {
         public String Username { get; set; }
         public String Password { get; set; }

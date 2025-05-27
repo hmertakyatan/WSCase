@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using Microsoft.Data.SqlClient;
 using WorkSoftCase.Repository.Interfaces.IRepository;
 
 namespace WorkSoftCase.Repository.Impl
@@ -86,27 +87,47 @@ namespace WorkSoftCase.Repository.Impl
         public async Task<bool> AddRangeAsync(IEnumerable<T> list)
         {
             var type = typeof(T);
-            var properties = type.GetProperties().Where(p => p.Name != "Id").ToArray();
+            var properties = type.GetProperties().ToArray();
             var tableName = GetTableName();
             var columnNames = string.Join(", ", properties.Select(p => p.Name));
             var paramNames = string.Join(", ", properties.Select(p => "@" + p.Name));
 
             var sql = $"INSERT INTO {tableName} ({columnNames}) VALUES ({paramNames})";
             //if any problem occured when transaction proccess, rollback all changes
+            if (_connection.State != ConnectionState.Open)
+            {
+                if (_connection is SqlConnection sqlConnection)
+                    await sqlConnection.OpenAsync();
+                else
+                    _connection.Open();
+            }
+
             using (var transaction = _connection.BeginTransaction())
             {
-                foreach (var entity in list)
+                try
                 {
-                    var result = await _connection.ExecuteAsync(sql, entity, transaction);
-                    if (result <= 0)
+                    foreach (var entity in list)
                     {
-                        transaction.Rollback();
-                        return false;
+                        var result = await _connection.ExecuteAsync(sql, entity, transaction);
+                        if (result <= 0)
+                        {
+                            transaction.Rollback();
+                            return false;
+                        }
                     }
-                }
 
-                transaction.Commit();
-                return true;
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+                finally
+                {
+                    _connection.Close();
+                }
             }
         }
     }

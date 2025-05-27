@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using WorkSoftCase.Dtos.Requests;
 using WorkSoftCase.Dtos.Responses;
@@ -11,7 +10,8 @@ using WorkSoftCase.Exceptions;
 using WorkSoftCase.Services.Interfaces;
 
 namespace WorkSoftCase.Controllers
-{   [Authorize]
+{
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CategoryController : ControllerBase
@@ -21,92 +21,80 @@ namespace WorkSoftCase.Controllers
         {
             _categoryService = categoryService;
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAllCategories()
         {
             try
             {
-                var categories = await _categoryService.GetAllCategoriesAsync();
-                if (categories == null || !categories.Any())
-                    return Ok(ApiResponse<IEnumerable<ProductResponse>>.SuccessMessage("Kategoriye ait ürün bulunamadı.", data: []));
-                return Ok(ApiResponse<IEnumerable<CategoryResponse>>.SuccessMessage("Tüm kategoriler başarıyla getirildi.", data: categories, statusCode: 200));
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(ApiResponse<object>.ErrorMessage(ex.Message, statusCode: 404));
+                var result = await _categoryService.GetAllCategoriesAsync();
+                if (result == null || result.Data == null || !result.Data.Any())
+                {
+                    return Ok(ApiResponse<IEnumerable<CategoryResponse>>.SuccessMessage(HttpContext, "Kategoriye ait ürün bulunamadı.", data: []));
+                }
+
+                var response = ApiResponse<IEnumerable<CategoryResponse>>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu."));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
-            
         }
+
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetCategoryById(Guid id)
         {
             try
             {
-                var response = await _categoryService.GetCategoryByIdAsync(id);
-                return Ok(ApiResponse<CategoryResponse>.SuccessMessage("Kategori başarıyla getirildi.", data: response));
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(ApiResponse<object>.ErrorMessage(ex.Message, statusCode: 404));
+                var result = await _categoryService.GetCategoryByIdAsync(id);
+                var response = ApiResponse<CategoryResponse>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu.", statusCode:500));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
-            
         }
 
         [HttpPost]
         public async Task<IActionResult> AddCategory([FromBody] CategoryRequest newCategory)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "Geçersiz kategori verisi.", 400));
+
             try
             {
-                if (!ModelState.IsValid)
-                    return BadRequest(ApiResponse<object>.ErrorMessage("Geçersiz kategori verisi.", statusCode: 400));
                 var result = await _categoryService.AddCategoryAsync(newCategory);
-                return Ok(ApiResponse<bool>.SuccessMessage("Kategori başarıyla oluşturuldu."));
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
-            catch (NotFoundException ex)
+            catch (Exception)
             {
-                return NotFound(ApiResponse<bool>.ErrorMessage(ex.Message, statusCode: 404));
-            }
-            catch(Exception)
-            {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu.", statusCode:500));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
         }
 
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> UpdateCategory(Guid id, [FromBody] CategoryRequest updatedCategory)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "Geçersiz kategori verisi.", 400));
+
+            var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
+            if (ipAddress == null)
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "IP adresi alınamadı.", 400));
+
             try
             {
-                if (!ModelState.IsValid)
-                    return BadRequest(ApiResponse<object>.ErrorMessage("Geçersiz kategori verisi.", statusCode: 400));
-                var remoteIp = HttpContext.Connection.RemoteIpAddress;
-                if (remoteIp == null)
-                    return BadRequest(ApiResponse<string>.ErrorMessage("IP adresi alınamadı."));
-                var result = await _categoryService.UpdateCategoryAsync(id, updatedCategory, remoteIp.ToString());
-                return Ok(ApiResponse<bool>.SuccessMessage("Kategori başarıyla güncellendi.", data: result));
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(ApiResponse<bool>.ErrorMessage(ex.Message, statusCode: 404));
-            }
-            catch (DatabaseOperationException ex)
-            {
-                return StatusCode(500, ApiResponse<bool>.ErrorMessage(ex.Message, statusCode: 500));
+                var result = await _categoryService.UpdateCategoryAsync(id, updatedCategory, ipAddress);
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<object>.ErrorMessage("Beklenmeyen bir hata oluştu.", statusCode:500));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
-            
-            
         }
 
         [HttpDelete("{id:guid}")]
@@ -114,19 +102,31 @@ namespace WorkSoftCase.Controllers
         {
             try
             {
-                var response = await _categoryService.DeleteCategoryAsync(id);
-                return Ok(ApiResponse<bool>.SuccessMessage("Kategori başarıyla silindi", data: true));
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(ApiResponse<bool>.ErrorMessage(ex.Message, statusCode: 404));
+                var result = await _categoryService.DeleteCategoryAsync(id);
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
             }
             catch (Exception)
             {
-                return StatusCode(500, ApiResponse<bool>.ErrorMessage("Beklenmeyen bir hata oluştu.", statusCode: 500));
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
             }
-            
+        }
+        [HttpPost("as-list")]
+        public async Task<IActionResult> AddProductsAsList([FromBody] List<CategoryRequest> categories)
+        {
+            if (categories == null || !categories.Any())
+                return BadRequest(ApiResponse<object>.ErrorMessage(HttpContext, "Kategori listesi boş.", 400));
 
+            try
+            {
+                var result = await _categoryService.AddCategoriesRangeAsync(categories);
+                var response = ApiResponse<object>.FromResult(HttpContext, result);
+                return StatusCode(response.StatusCode, response);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, ApiResponse<object>.ErrorMessage(HttpContext, "Beklenmeyen bir hata oluştu.", 500));
+            }
         }
     }
 }

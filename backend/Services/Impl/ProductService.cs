@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using WorkSoftCase.Dtos.Requests;
 using WorkSoftCase.Dtos.Responses;
@@ -9,6 +10,7 @@ using WorkSoftCase.Exceptions;
 using WorkSoftCase.Repository.Interfaces;
 using WorkSoftCase.Repository.Interfaces.IRepository;
 using WorkSoftCase.Services.Interfaces;
+using WorkSoftCase.Services.Results;
 
 namespace WorkSoftCase.Services.Impl
 {
@@ -23,7 +25,7 @@ namespace WorkSoftCase.Services.Impl
 
         }
 
-        public async Task<bool> AddProductAsync(ProductRequest newProduct)
+        public async Task<Result<object>> AddProductAsync(ProductRequest newProduct)
         {
             var product = new Product
             {
@@ -33,14 +35,16 @@ namespace WorkSoftCase.Services.Impl
             };
             var success = await _productRepository.AddAsync(product);
             if (!success)
-                throw new DatabaseOperationException("Ürün eklenemedi.");
+                return Result<object>.Failure("Ürün eklenemedi.");
 
-            return true;
+            return Result<object>.Success(message: "Ürün başarıyla eklendi.");
         }
 
-        public async Task<bool> UpdateProductAsync(Guid id, ProductRequest productRequest, string ModifyerIpAddress)
+        public async Task<Result<object>> UpdateProductAsync(Guid id, ProductRequest productRequest, string ModifyerIpAddress)
         {
-            var product = await _productRepository.GetByIdAsync(id) ?? throw new NotFoundException("Ürün bulunamadı.");
+            var product = await _productRepository.GetByIdAsync(id);
+            if (product == null)
+                return Result<object>.Failure("Ürün bulunamadı.", statusCode: 404);
             product.ProductName = productRequest.ProductName;
             product.ProductIcon = productRequest.ProductIcon;
             product.CategoryId = productRequest.CategoryId;
@@ -49,31 +53,38 @@ namespace WorkSoftCase.Services.Impl
 
             var success = await _productRepository.UpdateAsync(product);
             if (!success)
-                throw new DatabaseOperationException("Ürün güncellenemedi");
+                return Result<object>.Failure(message: "Ürün güncellenemedi.");
 
-            return true;
+            return  Result<object>.Success(message: "Ürün başarıyla güncellendi.");
         }
 
-        public async Task<bool> DeleteProductAsync(Guid id)
+        public async Task<Result<object>> DeleteProductAsync(Guid id)
         {
             var success = await _productRepository.DeleteAsync(id);
             if (!success)
-                throw new NotFoundException("Ürün bulunamadı");
+                return Result<object>.Failure(message: "Ürün silinemedi.");
 
-            return true;
+            return Result<object>.Success(message: "Ürün başarıyla silindi.");
         }
 
-        public async Task<IEnumerable<ProductResponse>> GetAllProductsAsync()
+        public async Task<Result<IEnumerable<ProductResponse>>> GetAllProductsAsync()
         {
-            var products = await _productRepository.GetProductsWithCategoryAsync();
-            if (!products.Any())
-                throw new NotFoundException("Ürünler bulunamadı.");
-            return products;
+            var products = await _productRepository.GetAllAsync();
+            var productResponses = products.Select(product => new ProductResponse
+            {
+                Id = product.Id,
+                ProductName = product.ProductName,
+                ProductIcon = product.ProductIcon,
+  
+            });
+            return Result<IEnumerable<ProductResponse>>.Success(productResponses, "Ürünler başarıyla listelendi.");
         }
 
-        public async Task<ProductResponse> GetProductByIdAsync(Guid id)
+        public async Task<Result<ProductResponse>> GetProductByIdAsync(Guid id)
         {
-            var product = await _productRepository.GetByIdAsync(id) ?? throw new NotFoundException("Ürün bulunamadı.");
+            var product = await _productRepository.GetByIdAsync(id);
+            if (product == null)
+                return Result<ProductResponse>.Failure(message: "Kullanıcı bulunamadı.");
             var productResponse = new ProductResponse
             {
                 Id = product.Id,
@@ -82,14 +93,13 @@ namespace WorkSoftCase.Services.Impl
             };
 
 
-            return productResponse;
+            return Result<ProductResponse>.Success(message: "Kullanıcı başarıyla getirildi.", data: productResponse);
         }
-        public async Task<IEnumerable<ProductResponse>> GetProductsByCategoryIdsAsync(IEnumerable<Guid> categoryIds)
+        public async Task<Result<IEnumerable<ProductResponse>>> GetProductsByCategoryIdsAsync(IEnumerable<Guid> categoryIds)
         {
             var products = await _productRepository.GetProductsByCategoryIdsAsync(categoryIds);
-            if (!products.Any())
-                throw new NotFoundException("Ürünler bulunamadı.");
-            var result = products.Select(p => new ProductResponse
+
+            var productsResponse = products.Select(p => new ProductResponse
             {
                 Id = p.Id,
                 ProductName = p.ProductName,
@@ -97,9 +107,9 @@ namespace WorkSoftCase.Services.Impl
 
             });
 
-            return result;
+            return Result<IEnumerable<ProductResponse>>.Success(message: "Kullanıcı başarıyla getirildi.", data: productsResponse);
         }
-        public async Task<bool> AddProductsRangeAsync(IEnumerable<ProductRequest> productRequests)
+        public async Task<Result<object>> AddProductsRangeAsync(IEnumerable<ProductRequest> productRequests)
         {
             var products = productRequests.Select(p => new Product
             {
@@ -110,9 +120,9 @@ namespace WorkSoftCase.Services.Impl
 
             var success = await _productRepository.AddRangeAsync(products);
             if (!success)
-                throw new DatabaseOperationException("Ürünler eklenemedi.");
+                return Result<object>.Failure(message: "Ürünler eklenemedi.");
 
-            return true;
+            return Result<object>.Success(message: "Ürün başarıyla oluturuldu.");
         }
     }
 }

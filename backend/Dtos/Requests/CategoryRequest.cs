@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WorkSoftCase.Dtos.Requests
 {
-    public class CategoryRequest
+    public record CategoryRequest
     {
         public required String CategoryName { get; set; }
         public required String CategoryIcon { get; set; }
